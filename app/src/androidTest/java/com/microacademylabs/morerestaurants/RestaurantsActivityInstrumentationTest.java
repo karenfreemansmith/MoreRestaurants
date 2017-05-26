@@ -27,7 +27,7 @@ public class RestaurantsActivityInstrumentationTest {
   @Test
   public void listItemClickDisplaysToastWithCorrectRestaurant() {
     View activityDecorView = activityTestRule.getActivity().getWindow().getDecorView();
-    String restaurantName = "Mi Mero Mole";
+    String restaurantName = "Sweet Hereafter \nServes great: Vegan Food";
     onData(anything())
       .inAdapterView(withId(R.id.restaurantListView))
         .atPosition(0)
