@@ -25,6 +25,7 @@ import okhttp3.Response;
 public class RestaurantsActivity extends AppCompatActivity {
   public static final String TAG = RestaurantsActivity.class.getSimpleName();
   private TextView locationText;
+
   private ListView mRestaurantList;
   private String[] restaurants = new String[] {
       "Sweet Hereafter", "Cricket", "Hawthorne Fish House", "Viking Soul Food", "Red Square", "Horse Brass", "Dick's Kitchen", "Taco Bell", "Me Kha Noodle Bar", "La Bonita Taqueria", "Smokehouse Tavern", "Pembiche", "Kay's Bar", "Gnarly Grey", "Slappy Cakes", "Mi Mero Mole"
@@ -53,13 +54,14 @@ public class RestaurantsActivity extends AppCompatActivity {
 
     Intent intent = getIntent();
     String location = intent.getStringExtra("location");
-    getRestaurants(location);
-    locationText.setText("Here are all the restaurants near " + location);
+    String term = intent.getStringExtra("term");
+    getRestaurants(location, term);
+    locationText.setText("Here are all the " + term + " near " + location);
   }
 
-  private void getRestaurants(String location) {
+  private void getRestaurants(String location, String term) {
     final YelpService yelp = new YelpService();
-    yelp.findStuff("gym", location, new Callback() {
+    yelp.findStuff(term, location, new Callback() {
 
       @Override
       public void onFailure(Call call, IOException e) {

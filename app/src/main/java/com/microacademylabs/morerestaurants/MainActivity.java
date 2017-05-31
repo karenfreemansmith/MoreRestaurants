@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
   public static final String TAG = MainActivity.class.getSimpleName();
   private Button btnFind;
   private EditText editLocation;
+  private EditText editTerm;
   private TextView titleTV;
 
   @Override
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     editLocation = (EditText)findViewById(R.id.etLocation);
+    editTerm = (EditText)findViewById(R.id.etTerm);
 
     titleTV = (TextView)findViewById(R.id.tvTitle);
     Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/ExpletusSans-SemiBoldItalic.ttf");
@@ -32,11 +34,12 @@ public class MainActivity extends AppCompatActivity {
     btnFind.setOnClickListener(new View.OnClickListener() {
        @Override
        public void onClick(View v) {
-//         Toast.makeText(MainActivity.this, "Hello World", Toast.LENGTH_LONG).show();
          String location = editLocation.getText().toString();
-//         Log.d(TAG, location);
+         String term = editTerm.getText().toString();
+
          Intent intent = new Intent(MainActivity.this, RestaurantsActivity.class);
          intent.putExtra("location", location);
+         intent.putExtra("term", term);
          startActivity(intent);
        }
     });
