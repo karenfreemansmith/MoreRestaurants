@@ -3,11 +3,13 @@ package com.microacademylabs.morerestaurants;
 import android.content.Intent;
 import android.widget.TextView;
 
+import com.microacademylabs.morerestaurants.activities.MainActivity;
+import com.microacademylabs.morerestaurants.activities.RestaurantsActivity;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowActivity;

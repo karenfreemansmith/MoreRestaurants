@@ -1,15 +1,15 @@
-package com.microacademylabs.morerestaurants;
+package com.microacademylabs.morerestaurants.activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.microacademylabs.morerestaurants.R;
 
 public class MainActivity extends AppCompatActivity {
   public static final String TAG = MainActivity.class.getSimpleName();

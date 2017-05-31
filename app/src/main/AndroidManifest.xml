@@ -10,17 +10,17 @@
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="true"
         android:supportsRtl="true">
-        <activity android:name=".MainActivity"
+        <activity android:name=".activities.MainActivity"
                   android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".RestaurantsActivity">
+        <activity android:name=".activities.RestaurantsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.microacademylabs.morerestaurants.MainActivity">
+                android:value="com.microacademylabs.morerestaurants.activities.MainActivity">
             </meta-data>
         </activity>
     </application>

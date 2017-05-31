@@ -3,6 +3,8 @@ package com.microacademylabs.morerestaurants;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.microacademylabs.morerestaurants.activities.MainActivity;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
